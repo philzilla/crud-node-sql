@@ -3,6 +3,7 @@ module.exports = {
         let query = "SELECT * FROM `players` ORDER BY id ASC"; // Listes des joueurs
         
         db.query(query, (err, result) => {
+            
             if (err) {
                 res.redirect('/');
             }

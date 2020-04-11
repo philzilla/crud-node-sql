@@ -1,0 +1,20 @@
+<%- include ('partials/header.ejs'); -%>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form class="form-signin" action="/login" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Mot de passe</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+     
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>
