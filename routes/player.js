@@ -19,6 +19,7 @@ module.exports = {
     let last_name = req.body.last_name;
     let email = req.body.email;
     let password = req.body.password;
+    let admin = req.body.admin;
     let position = req.body.position;
     let number = req.body.number;
     let username = req.body.username;
@@ -52,7 +53,7 @@ module.exports = {
 
             bcrypt.hash(password, 10, function (err, hash) {
               let query =
-                "INSERT INTO `players` (first_name, last_name, email, password ,position, number, image, user_name) VALUES ('" +
+                "INSERT INTO `players` (first_name, last_name, email, password , admin, position, number, image, user_name) VALUES ('" +
                 first_name +
                 "', '" +
                 last_name +
@@ -60,6 +61,8 @@ module.exports = {
                 email +
                 "', '" +
                 hash +
+                "', '" +
+                admin +
                 "', '" +
                 position +
                 "', '" +
@@ -110,6 +113,7 @@ module.exports = {
     let first_name = req.body.first_name;
     let last_name = req.body.last_name;
     let email = req.body.email;
+    let admin = req.body.admin;
     let position = req.body.position;
     let number = req.body.number;
 
@@ -123,6 +127,8 @@ module.exports = {
         email +
         "', `password` = '" +
         hash +
+        "', `admin` = '" +
+        admin +
         "', `position` = '" +
         position +
         "', `number` = '" +

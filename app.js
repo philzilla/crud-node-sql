@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const path = require('path');
 const app = express();
+require('dotenv').config();
+
 
 
 const port = 3000;
@@ -48,8 +50,9 @@ app.get('/delete/:id', deletePlayer);
 app.post('/add', addPlayer);
 app.post('/edit/:id', editPlayer);
 
-app.get('/login', getLogin )
-app.post('/login', postLogin )
+app.route('/login')
+.get(getLogin)
+.post(postLogin)
 
 
 app.listen(port, () => {
